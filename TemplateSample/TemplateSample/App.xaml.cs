@@ -1,6 +1,7 @@
 ﻿using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
+using TemplateSample.ViewModels;
 using TemplateSample.Views;
 using Xamarin.Forms;
 
@@ -26,7 +27,7 @@ namespace TemplateSample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainViewModel>();
         }
     }
 }
