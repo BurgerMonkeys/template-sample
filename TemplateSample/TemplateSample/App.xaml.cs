@@ -1,28 +1,32 @@
-﻿using System;
+﻿using Prism;
+using Prism.DryIoc;
+using Prism.Ioc;
+using TemplateSample.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TemplateSample
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer) : base(initializer)
+        {
+
+        }
+
+        protected override async void OnInitialized()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var startPage = nameof(NavigationPage) + "/" + nameof(MainPage);
+            await NavigationService.NavigateAsync(startPage);
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
 }
