@@ -5,6 +5,49 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Template Sample">
     <StackLayout Padding="16,8">
+
+        <CarouselView
+            HeightRequest="300"
+            HorizontalScrollBarVisibility="Never"
+            ItemsSource="{Binding HighLights}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#F0EFFE"
+                        CornerRadius="20"
+                        HasShadow="False"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+
+                            <Image
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                Source="{Binding ImageUrl}" />
+
+                            <Label
+                                Grid.Row="1"
+                                BackgroundColor="#98000000"
+                                FontAttributes="Bold"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding Title}"
+                                TextColor="White"
+                                VerticalTextAlignment="Center" />
+
+                        </Grid>
+
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
         <CollectionView ItemsSource="{Binding Talks}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
