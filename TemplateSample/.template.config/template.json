@@ -1,0 +1,44 @@
+﻿{
+ "$schema": "http://json.schemastore.org/template",
+ "author": "ricardoprestes",
+ "classifications": [],
+ "description": "",
+ "name": "TemplateSample",
+ "defaultName": "TemplateSample",
+ "identity": "TemplateSample.CSharp",
+ "groupIdentity": "TemplateSample",
+ "tags": {
+   "language": "C#",
+   "type": "project",
+   "vsmac-category": "multiplat/app/forms"
+ },
+ "shortName": "TemplateSample",
+ "sourceName": "TemplateSample",
+ "guids": [
+   "{A081C0B8-75E8-43C0-9BE6-DDCE188FA6DF}",
+   "{325D5F78-CD7F-4CE0-B8A6-894882D8A110}",
+   "{2588DA49-E8A4-404B-9CE0-99B0B5E73E8B}"
+ ],
+ "sources": [
+   {
+     "modifiers": [
+       {
+         "exclude": [
+           ".vs/**/*"
+         ]
+       }
+     ]
+   }
+ ],
+ "primaryOutputs": [
+   {
+     "path": "TemplateSample/TemplateSample.csproj"
+   },
+   {
+     "path": "TemplateSample.Android/TemplateSample.Android.csproj"
+   },
+   {
+     "path": "TemplateSample.iOS/TemplateSample.iOS.csproj"
+   }
+ ]
+}
