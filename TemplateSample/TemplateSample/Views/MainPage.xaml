@@ -6,8 +6,8 @@
     xmlns:views="clr-namespace:TemplateSample.Views"
     Title="Template Sample">
 
-    <views:TalksPage Title="Talks" />
-    <views:ProfilePage Title="Profile" />
+    <views:TalksPage Title="Talks" IconImageSource="list" />
+    <views:ProfilePage Title="Profile" IconImageSource="profile" />
 
 </TabbedPage>
 

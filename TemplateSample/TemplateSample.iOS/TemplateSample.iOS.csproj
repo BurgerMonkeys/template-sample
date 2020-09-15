@@ -113,6 +113,14 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\list.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\list.imageset\list_30.png" />
+    <ImageAsset Include="Assets.xcassets\list.imageset\list_60.png" />
+    <ImageAsset Include="Assets.xcassets\list.imageset\list_9090.png" />
+    <ImageAsset Include="Assets.xcassets\profile.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile.imageset\profile_30.png" />
+    <ImageAsset Include="Assets.xcassets\profile.imageset\profile_60.png" />
+    <ImageAsset Include="Assets.xcassets\profile.imageset\profile_90.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,5 +143,9 @@
       <Project>{A081C0B8-75E8-43C0-9BE6-DDCE188FA6DF}</Project>
       <Name>TemplateSample</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\list.imageset\" />
+    <Folder Include="Assets.xcassets\profile.imageset\" />
   </ItemGroup>
 </Project>
