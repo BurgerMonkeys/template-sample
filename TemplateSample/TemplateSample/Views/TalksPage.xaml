@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TemplateSample.Views.TalksPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Talks">
+    <StackLayout Padding="16,8">
+
+        <CarouselView
+            HeightRequest="300"
+            HorizontalScrollBarVisibility="Never"
+            ItemsSource="{Binding HighLights}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#F0EFFE"
+                        CornerRadius="20"
+                        HasShadow="False"
+                        HorizontalOptions="Center"
+                        IsClippedToBounds="True">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="40" />
+                            </Grid.RowDefinitions>
+
+                            <Image
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                Source="{Binding ImageUrl}" />
+
+                            <Label
+                                Grid.Row="1"
+                                BackgroundColor="#98000000"
+                                FontAttributes="Bold"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding Title}"
+                                TextColor="White"
+                                VerticalTextAlignment="Center" />
+
+                        </Grid>
+
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <CollectionView ItemsSource="{Binding Talks}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="70" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.ColumnSpan="2"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            Text="{Binding Title}"
+                            TextColor="#0B5A9D"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            Grid.Row="1"
+                            Text="{Binding Speaker}"
+                            TextColor="#707070" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Small"
+                            Text="{Binding Date, StringFormat='{0:d}'}"
+                            TextColor="#707070"
+                            VerticalTextAlignment="End" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

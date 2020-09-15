@@ -28,6 +28,8 @@ namespace TemplateSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainViewModel>();
+            containerRegistry.RegisterForNavigation<TalksPage, TalksViewModel>();
+            containerRegistry.RegisterForNavigation<ProfilePage, ProfileViewModel>();
         }
     }
 }
