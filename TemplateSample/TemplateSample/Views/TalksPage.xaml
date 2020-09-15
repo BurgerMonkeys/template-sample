@@ -3,7 +3,9 @@
     x:Class="TemplateSample.Views.TalksPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Talks">
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Talks"
+    ios:Page.UseSafeArea="True">
     <StackLayout Padding="16,8">
 
         <CarouselView

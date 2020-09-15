@@ -1,5 +1,30 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TemplateSample.Views.ProfilePage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="TemplateSample.Views.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True">
+    <StackLayout Padding="16">
+        <ffimageloading:CachedImage
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            LoadingPlaceholder="profile"
+            Source="{Binding User.ProfileImg}"
+            WidthRequest="200">
+            <ffimageloading:CachedImage.Transformations>
+                <fftransformations:CircleTransformation BorderHexColor="#F0EFFE" BorderSize="15" />
+            </ffimageloading:CachedImage.Transformations>
+        </ffimageloading:CachedImage>
+        <Label
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="{Binding User.Name}" />
+        <Label
+            HorizontalTextAlignment="Center"
+            Text="{Binding User.Email}"
+            TextColor="#707070" />
+    </StackLayout>
 </ContentPage>
